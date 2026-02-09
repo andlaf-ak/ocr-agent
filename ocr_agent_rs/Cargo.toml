@@ -1,0 +1,20 @@
+[package]
+name = "ocr_agent_rs"
+version = "0.1.0"
+edition = "2021"
+description = "OCR Agent — extract text from scanned PDFs using Tesseract OCR"
+
+[[bin]]
+name = "ocr_agent_rs"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+image = "0.25"
+leptess = "0.14"
+cairo-rs = { version = "0.20", features = ["png"] }
+poppler = { version = "0.6", features = ["render"] }
+
+[profile.release]
+opt-level = 3

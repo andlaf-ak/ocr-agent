@@ -1,0 +1,4 @@
+[env]
+# Required for linking against poppler-glib on macOS (Homebrew)
+PKG_CONFIG_PATH = { value = "/opt/homebrew/lib/pkgconfig:/opt/homebrew/Cellar/poppler/26.02.0/lib/pkgconfig", force = false }
+LIBRARY_PATH = { value = "/opt/homebrew/lib:/opt/homebrew/Cellar/poppler/26.02.0/lib", force = false }
